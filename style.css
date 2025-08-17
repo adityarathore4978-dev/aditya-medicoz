@@ -1,0 +1,98 @@
+:root{
+  --bg:#0e1325; --bg2:#101936; --card:#0f1b3e; --text:#eaf2ff; --muted:#a8b3cf;
+  --brand:#4f8cff; --brand2:#3dd9b6; --line:#1e2a5a; --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);
+  background:radial-gradient(1200px 800px at 80% -10%, rgba(79,140,255,.15), rgba(0,0,0,0) 60%),
+             radial-gradient(1000px 600px at -10% 10%, rgba(61,217,182,.14), rgba(0,0,0,0) 60%), var(--bg);}
+img{max-width:100%;display:block;border-radius:14px}
+a{color:inherit;text-decoration:none}
+.small{font-size:13px}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+.section{padding:56px 0}
+.section.alt{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0))}
+.center{text-align:center}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.grid2{display:grid;gap:24px;grid-template-columns:1.1fr .9fr}
+.grid3{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
+.grid4{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
+.cards .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+.check{padding-left:18px}
+.check li{margin:6px 0}
+.trust{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0 0;padding:0;list-style:none;color:#cdd8ff}
+
+/* Nav */
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;background:#000;color:#fff;padding:8px 10px;border-radius:8px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(16,25,54,.75);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.badge{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;box-shadow:var(--shadow)}
+.links{display:flex;gap:18px;align-items:center}
+.links a{padding:10px;border-radius:8px}
+.links a:hover{background:rgba(255,255,255,.06)}
+.menu{display:none;background:transparent;border:0;cursor:pointer}
+.menu span{display:block;width:24px;height:2px;background:#eaf2ff;margin:5px 0;border-radius:2px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#6aa6ff);color:#fff;font-weight:700;border:0;cursor:pointer;box-shadow:var(--shadow)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.2);color:var(--text)}
+.btn.sm{padding:10px 14px;border-radius:10px;font-weight:600}
+.btn.full{width:100%}
+.muted{color:var(--muted)}
+
+/* Hero */
+.hero{padding:40px 0 10px}
+.pill{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;color:#e0ecff}
+.hero h1{font-size:44px;line-height:1.1;margin:8px 0 10px}
+.sub{color:var(--muted);font-size:16px}
+.mock{align-self:center}
+.phone{width:100%;aspect-ratio:9/16;border-radius:22px;background:linear-gradient(145deg,#1a2347,#0c1230);position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.status{position:absolute;inset:12px 12px auto; height:26px; border-radius:8px; background:rgba(255,255,255,.06); display:flex; align-items:center; gap:8px; padding:0 10px; font-size:12px; color:#dbe7ff}
+.p-body{position:absolute;inset:56px 12px 12px;display:grid;gap:10px;grid-template-rows:auto 1fr auto}
+.row{display:flex;gap:10px;align-items:center}
+.card{display:block}
+.card.row{display:flex;gap:10px;align-items:center}
+.dot{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand2))}
+.tile{display:grid;place-items:center;border-radius:14px;border:1px solid rgba(255,255,255,.08);padding:20px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01))}
+.tile span{color:#b9c7ff;font-size:12px}
+.title{font-weight:700}
+
+/* Forms / content */
+.form{display:grid;gap:12px}
+.form label{display:grid;gap:6px;font-size:14px}
+input,select,textarea{padding:12px;border:1px solid var(--line);border-radius:10px;background:rgba(5,10,25,.6);color:#eaf2ff;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--brand)}
+.info{align-self:start}
+.faq{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:600}
+
+/* Banner & footer */
+.banner{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#0b1b2a}
+.banner .btn{box-shadow:none}
+.banner .btn.ghost{border-color:#0b1b2a;color:#0b1b2a}
+.footer{border-top:1px solid rgba(255,255,255,.06);padding:28px 0 60px}
+.foot{display:grid;gap:10px;grid-template-columns:1fr auto}
+.foot-links{display:flex;gap:12px;flex-wrap:wrap}
+.copy{color:var(--muted);font-size:13px}
+.map{height:220px;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(45deg,#08122e,#0d1b3f)}
+
+/* Toast & Modal */
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#0b1b3a;color:#eaf2ff;border:1px solid rgba(255,255,255,.1);padding:12px 16px;border-radius:10px;opacity:0;pointer-events:none;transition:.3s;box-shadow:var(--shadow)}
+.toast.show{opacity:1;pointer-events:auto}
+.modal{border:0;border-radius:16px;padding:0;background:transparent}
+.modal::backdrop{background:rgba(0,0,0,.5)}
+.modal-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px;min-width:280px}
+.modal-card menu{display:flex;gap:10px;justify-content:flex-end;margin:12px 0 0}
+
+/* Responsive */
+@media (max-width:960px){
+  .grid2{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr 1fr}
+  .grid4{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:36px}
+  .links{position:fixed;inset:56px 12px auto 12px;background:rgba(10,15,32,.98);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;display:none;flex-direction:column}
+  .menu{display:block}
+}
+@media (max-width:560px){
+  .grid3,.grid4{grid-template-columns:1fr}
+}
